@@ -9,6 +9,7 @@
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <title>weather search</title>
   </head>
@@ -18,7 +19,13 @@
         <form id="search-form">   
   <div class="row">
     <div class="col-9">
-        <input type="search" placeholder="Type city..." class="form-control" />
+
+        <input type="search" 
+        placeholder="Type city..."
+         class="form-control" 
+         id="search-city" 
+         autocomplete="off"/>
+
     </div>
     <div class="col-3">
       <input type="submit" value="search" class="btn btn-primary w-100"/>
@@ -26,27 +33,26 @@
   </div>
    
     </form>
-    <h1>krugersdorp</h1>
+    <h1 id="city">krugersdorp</h1>
 <div class="row">
-    <div class="col-4">
+    <div class="col-3">
       <div class="d-flex weather-icon">
-      <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="clear" id="icon"/>
-      <div id="temperature"><strong>20</strong><span>℃|</span><span><a href="#">℉</a></span></div>
+      <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="clear" id="icons"/>
+      <div ><strong id="temperature"></strong><span>℃</span></div>
       </div>
       </div>
     
     <div class="col-4">
        <ul>
-            <li>Precipitation:22 <span> %</span></li>
-             <li>Humidity:15 <span> %</span></li>
-              <li>Wind:5 <span> km/h</span></li>
+             <li>Humidity: <span id="Humidity"></span> %</li>
+              <li>Wind: <span id="wind"></span> km/h</li>
         </ul>
     </div>
-    <div class="col-2">
+    <div class="col-4">
       <ul>
             <h2>Weather</h2>
-            <li><div id="dayTime">friday 14:00</div></li>
-            <li><div id="sky">clear</div></li>
+            <li><div id="dayTime"></div></li>
+            <li><div id="description"></div></li>
         </ul>
     </div>
   </div>
@@ -56,8 +62,7 @@
   <a href="https://github.com/HangwelaniN/weather-search" target="_blank" id="link">open-source code</a>,by Hangwelani Ngwekhulu
 </div>
  </small>
-</div
-
-    <script src="script.js"></script>
+</div>
+<script src="index.js"></script>
   </body>
 </html>
