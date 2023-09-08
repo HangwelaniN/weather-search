@@ -31,10 +31,8 @@ ul {
 }
 .weather-icon strong {
   display: inline;
-  font-family: "Google Sans", arial, sans-serif;
   font-size: 48px;
   font-weight: 400;
-  letter-spacing: normal;
   line-height: 56px;
 }
 .weather-icon span {
@@ -47,4 +45,19 @@ li:first-letter {
 }
 #link {
   text-decoration: none;
+}
+.weather-forecast {
+  margin-top: 5px;
+  text-align: center;
+}
+#forecast-day {
+  font-size: 16px;
+  color: #202124;
+}
+.max {
+  color: #202124;
+  padding-right: 5px;
+}
+.min {
+  color: rgb(112, 117, 122);
 }
